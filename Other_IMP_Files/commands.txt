@@ -1,0 +1,16 @@
+
+# pytest -v ".//All_Test_Cases_Package//Enrollment_Groups_Module_Test_Cases.py"
+
+# pytest -v ".//All_Test_Cases_Package//Deployment_Manager_Module//Register_Page_Sub_Module//Register_Page_Test_Cases.py"
+
+
+# pytest ".//All_Test_Cases_Package//Deployment_Manager_Test_Cases.py" --html-report=./Results_Folder/Reports --title='PYTEST REPORT'
+
+# pytest Test_Cases/ --html-report=./Reports --title='PYTEST REPORT'
+
+
+# Allure Report Commands
+
+# 1. python -m pytest ".\All_Test_Cases_Package\Deployment_Manager_Test_Cases.py" --alluredir=".//Results_Folder//Allure_Report"
+
+# 2. allure serve .\\Results_Folder\\Allure_Report\\
