@@ -1379,7 +1379,7 @@ class Test_Visitor_Search_Module(Base_Class):
     #         self.d.save_screenshot(f"{self.screenshots_path}\\test_TC_VS_143.png")
     #         assert False
 
-    @pytest.mark.p1
+    # @pytest.mark.p1
     def test_TC_VS_144(self):
         self.logger.info("Visitor search module = test_TC_VS_144 execution started..")
         if Visitor_Search_Module_pom_new(). \
