@@ -1,3 +1,4 @@
+import os
 import re
 import sys
 import time
@@ -6,6 +7,7 @@ from pathlib import Path
 import pyautogui
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.file_detector import LocalFileDetector
 from selenium.webdriver.support.select import Select
 from All_Test_Cases_Package.conftest import Base_Class
 from Config_Package.INI_Config_Files.Portal_Menu_Read_INI import Read_Portal_Menu_Components
@@ -4782,11 +4784,18 @@ class Visitor_Search_Module_pom_new:
                                            Read_Visitor_Search_Components().photo_upload_container_by_xpath())
         upload_photo.click()
         time.sleep(2)
-        file_path = f"{os.environ['WORKSPACE']}/Test_Data/img/img1.png"
+        print("file path =====>>>> ")
+        # file_path = f"{Path(__file__).parent.parent.parent}\\Test_Data\\img\\img1.png"
+        # file_path = f"{os.environ['WORKSPACE']}/Test_Data/img/img1.png"
+        #file_path = Path(__file__).parent / "img1.png"
+        script_directory = Path(__file__).parent
+        file_path = script_directory / ".." / ".." / "Test_Data" / "img" / "img1.png"
+        print("file path =====>>>> ",file_path)
         # file_path = 'C:\\Users\\baps\\Pictures\\uim.png'
         # file_path = 'D:\Chrome_Download\img1.png'
-
-        pyautogui.write(file_path)
+        time.sleep(2)
+        pyautogui.write(str(file_path))
+        # pyautogui.write(file_path)
         pyautogui.press('enter')
         time.sleep(2)
         pyautogui.press('enter')
