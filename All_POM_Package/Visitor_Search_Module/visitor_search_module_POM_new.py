@@ -4791,8 +4791,7 @@ class Visitor_Search_Module_pom_new:
         # script_directory = Path(__file__).parent
         # file_path = script_directory / ".." / ".." / "Test_Data" / "img" / "img1.png"
         ##############################
-        relative_file_path = "img1.png"
-        file_path = str(Path(__file__).resolve().parent / relative_file_path)
+        file_path = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Try1\\Test_Data\\img\\img1.png"
 
         print("file path =====>>>> ",file_path)
         # file_path = 'C:\\Users\\baps\\Pictures\\uim.png'
