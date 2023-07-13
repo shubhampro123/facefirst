@@ -3,7 +3,6 @@ import re
 import sys
 import time
 from pathlib import Path
-
 import pyautogui
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
