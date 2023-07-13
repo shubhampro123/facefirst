@@ -3,6 +3,7 @@ import re
 import sys
 import time
 from pathlib import Path
+
 import pyautogui
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
@@ -4787,13 +4788,19 @@ class Visitor_Search_Module_pom_new:
         # file_path = f"{Path(__file__).parent.parent.parent}\\Test_Data\\img\\img1.png"
         # file_path = f"{os.environ['WORKSPACE']}/Test_Data/img/img1.png"
         #file_path = Path(__file__).parent / "img1.png"
-        script_directory = Path(__file__).parent
-        file_path = script_directory / ".." / ".." / "Test_Data" / "img" / "img1.png"
+        # script_directory = Path(__file__).parent
+        # file_path = script_directory / ".." / ".." / "Test_Data" / "img" / "img1.png"
+        ##############################
+        script_directory = Path(__file__).parent.resolve()
+        relative_file_path = Path("Test_Data/img/img1.png")
+        absolute_file_path = script_directory / relative_file_path
+        file_path = str(absolute_file_path) if absolute_file_path.exists() else str(relative_file_path)
+
         print("file path =====>>>> ",file_path)
         # file_path = 'C:\\Users\\baps\\Pictures\\uim.png'
         # file_path = 'D:\Chrome_Download\img1.png'
         time.sleep(2)
-        pyautogui.write(str(file_path))
+        pyautogui.write(file_path)
         # pyautogui.write(file_path)
         pyautogui.press('enter')
         time.sleep(2)
