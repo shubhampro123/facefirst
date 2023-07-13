@@ -192,10 +192,10 @@ class Base_Class:
             files_in_base_path = base_path.iterdir()
             print(type(files_in_base_path))
             print(files_in_base_path)
-            for file in files_list[:-3]:
-                for file_name in files_in_base_path:
-                    if file_name.name == file:
-                        os.remove(file_name)
+            # for file in files_list[:-3]:
+            #     for file_name in files_in_base_path:
+            #         if file_name.name == file:
+            #             os.remove(file_name)
 
             now = datetime.now()
             print("now =", now)
