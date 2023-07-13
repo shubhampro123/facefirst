@@ -165,6 +165,7 @@ class Base_Class:
         chrome_options = Options()
         chrome_options.add_experimental_option("detach", True)
         d = webdriver.Chrome(options=chrome_options)
+        d.file_detector = LocalFileDetector()
         df = Read_excel.get_registration_form_data_df()
         df = df.replace(np.nan, '', regex=True)
         name = [i for i in df['Name']]
