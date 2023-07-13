@@ -4782,7 +4782,7 @@ class Visitor_Search_Module_pom_new:
                                            Read_Visitor_Search_Components().photo_upload_container_by_xpath())
         upload_photo.click()
         time.sleep(2)
-        file_path = f"{Path(__file__).parent.parent.parent}\\Test_Data\\img\\img1.png"
+        file_path = f"{os.environ['WORKSPACE']}/Test_Data/img/img1.png"
         # file_path = 'C:\\Users\\baps\\Pictures\\uim.png'
         # file_path = 'D:\Chrome_Download\img1.png'
 
