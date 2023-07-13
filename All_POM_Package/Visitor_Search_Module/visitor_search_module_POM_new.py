@@ -4791,10 +4791,8 @@ class Visitor_Search_Module_pom_new:
         # script_directory = Path(__file__).parent
         # file_path = script_directory / ".." / ".." / "Test_Data" / "img" / "img1.png"
         ##############################
-        script_directory = Path(__file__).parent.resolve()
-        relative_file_path = Path("Test_Data/img/img1.png")
-        absolute_file_path = script_directory / relative_file_path
-        file_path = str(absolute_file_path) if absolute_file_path.exists() else str(relative_file_path)
+        relative_file_path = "img1.png"
+        file_path = str(Path(__file__).resolve().parent / relative_file_path)
 
         print("file path =====>>>> ",file_path)
         # file_path = 'C:\\Users\\baps\\Pictures\\uim.png'
